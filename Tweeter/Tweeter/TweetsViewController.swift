@@ -59,7 +59,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.tweetContentLabel.text = tweet.text as? String
         cell.retweetLabel.text = "\(tweet.retweetCount)"
         cell.favoriteLabel.text = "\(tweet.favoritesCount)"
-        cell.timestampLabel.text = "\(tweet.timestamp)"
+        cell.timestampLabel.text = "\(tweet.timestamp!)"
         
         
         cell.profileImageView.layer.cornerRadius = 7.0

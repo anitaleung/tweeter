@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086227641C7AD2800093420B /* TweetsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086227631C7AD2800093420B /* TweetsNavigationController.swift */; };
 		08BA0F1F1C79CB9100D0439B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BA0F1E1C79CB9100D0439B /* AppDelegate.swift */; };
 		08BA0F241C79CB9100D0439B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BA0F221C79CB9100D0439B /* Main.storyboard */; };
 		08BA0F261C79CB9100D0439B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08BA0F251C79CB9100D0439B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		086227631C7AD2800093420B /* TweetsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsNavigationController.swift; sourceTree = "<group>"; };
 		08BA0F1B1C79CB9100D0439B /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BA0F1E1C79CB9100D0439B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08BA0F231C79CB9100D0439B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				08BA0F221C79CB9100D0439B /* Main.storyboard */,
 				08BA0F3F1C7A97A500D0439B /* TweetCell.swift */,
 				08BA0F251C79CB9100D0439B /* Assets.xcassets */,
+				086227631C7AD2800093420B /* TweetsNavigationController.swift */,
 				08BA0F271C79CB9100D0439B /* LaunchScreen.storyboard */,
 				08BA0F2A1C79CB9100D0439B /* Info.plist */,
 			);
@@ -256,6 +259,7 @@
 				08BA0F331C79CDA000D0439B /* LoginViewController.swift in Sources */,
 				08BA0F3E1C7A7D0C00D0439B /* TweetsViewController.swift in Sources */,
 				08BA0F3C1C7A74CA00D0439B /* TwitterClient.swift in Sources */,
+				086227641C7AD2800093420B /* TweetsNavigationController.swift in Sources */,
 				08BA0F1F1C79CB9100D0439B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="638" y="256"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--Home-->
         <scene sceneID="HjO-3o-rE9">
             <objects>
                 <viewController storyboardIdentifier="TweetsViewController" id="2m9-0P-GEv" customClass="TweetsViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,8 +135,9 @@
                         </prototypes>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3EN-zf-JAs">
+                    <navigationItem key="navigationItem" title="Home" id="3EN-zf-JAs">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="yVi-ZN-qB7">
+                            <color key="tintColor" red="0.97977561940000002" green="0.9702191295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onLogoutButton:" destination="2m9-0P-GEv" id="bZN-jd-cOo"/>
                             </connections>
@@ -150,17 +151,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhK-xc-Feh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="256"/>
+            <point key="canvasLocation" x="1529" y="265"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tweets Navigation Controller-->
         <scene sceneID="shx-Hm-FEr">
             <objects>
-                <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="yNp-N4-OEI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="yNp-N4-OEI" customClass="TweetsNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OhR-OK-jdn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46348906340808349" green="0.77397410045839099" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97977561940000002" green="0.9702191295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
