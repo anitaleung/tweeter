@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="638" y="256"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--Tweets-->
         <scene sceneID="HjO-3o-rE9">
             <objects>
                 <viewController storyboardIdentifier="TweetsViewController" id="2m9-0P-GEv" customClass="TweetsViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                                             <rect key="frame" x="66" y="79" width="23" height="27"/>
                                             <state key="normal" title="Retweet: " image="retweet-action_default"/>
                                             <connections>
-                                                <action selector="onRetweetButton:" destination="2m9-0P-GEv" eventType="touchUpInside" id="jqa-l1-JXW"/>
+                                                <action selector="onRetweetButton:" destination="cRH-aQ-9eg" eventType="touchUpInside" id="Fy2-69-Sf0"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="52" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-Ua-zSH">
@@ -102,14 +102,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCO-um-aYW">
-                                            <rect key="frame" x="122" y="81" width="24" height="28"/>
+                                            <rect key="frame" x="138" y="81" width="24" height="28"/>
                                             <state key="normal" title="Favorite:" image="like-action-off"/>
                                             <connections>
-                                                <action selector="onFavoriteButton:" destination="2m9-0P-GEv" eventType="touchUpInside" id="SVJ-oD-f3j"/>
+                                                <action selector="onFavoriteButton:" destination="cRH-aQ-9eg" eventType="touchUpInside" id="7RH-aC-aGg"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="52" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pec-hr-XqE">
-                                            <rect key="frame" x="151" y="87" width="38" height="15"/>
+                                            <rect key="frame" x="167" y="87" width="38" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -139,7 +139,7 @@
                         </prototypes>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3EN-zf-JAs">
+                    <navigationItem key="navigationItem" title="Tweets" id="3EN-zf-JAs">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="yVi-ZN-qB7">
                             <color key="tintColor" red="0.97977561940000002" green="0.9702191295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

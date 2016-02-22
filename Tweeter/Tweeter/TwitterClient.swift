@@ -32,8 +32,6 @@ class TwitterClient: BDBOAuth1SessionManager {
         }
     }
     
-    
-    
     func logout() {
         User.currentUser = nil
         deauthorize()
@@ -84,6 +82,19 @@ class TwitterClient: BDBOAuth1SessionManager {
             
         }, failure: { (task: NSURLSessionDataTask?, error: NSError) -> Void in
             failure(error)
+        })
+    }
+    
+    func favorite(id: String, completion: (error: NSError?) -> ()) {
+        let params = NSMutableDictionary()
+        params.setValue(id, forKey: "id")
+        POST("1.1/favorites/create.json", parameters: params, progress: nil,
+            success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName("tweetDidPostNotification", object: nil)
+                completion(error: nil)
+            }, failure: { (task: NSURLSessionDataTask?, error: NSError) -> Void in
+                print(error)
+                completion(error: error)
         })
     }
     

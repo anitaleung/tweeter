@@ -12,8 +12,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet var tableView: UITableView!
     var tweets: [Tweet]!
-    var toggleFavorite = 1
-    var toggleRetweet = 1
+
+    var tweet: Tweet?
+    //var favoriteCount: Int
+    //var retweetCount: Int
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
                 print("Timestamp: \(tweet.timestamp)")
                 print("Favorites: \(tweet.favoritesCount)")
                 print("Retweets: \(tweet.retweetCount)")
+                
+                //favoriteCount = tweet.favoritesCount
+                //print("Updated Favorites: \(favoriteCount)")
+                
+                
             }
             
             self.tableView.reloadData()
@@ -52,13 +59,14 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
+        cell.tweet = tweets![indexPath.row]
         let tweet = tweets[indexPath.row]
         
         cell.usernameLabel.text = "@\(tweet.username!)"
         cell.screennameLabel.text = tweet.displayname
         cell.tweetContentLabel.text = tweet.text as? String
-        cell.retweetLabel.text = "\(tweet.retweetCount)"
-        cell.favoriteLabel.text = "\(tweet.favoritesCount)"
+        //cell.retweetLabel.text = "\(tweet.retweetCount)"
+        //cell.favoriteLabel.text = "\(tweet.favoritesCount)"
         cell.timestampLabel.text = "\(tweet.timestamp!)"
         
         
@@ -87,28 +95,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
 
-    @IBAction func onRetweetButton(sender: AnyObject) {
-        print("Retweet button clicked")
-        if toggleRetweet == 0 {
-            toggleRetweet = 1
-            sender.setImage(UIImage(named: "retweet-action_default"), forState: UIControlState.Normal)
-        } else {
-            toggleRetweet = 0
-            sender.setImage(UIImage(named: "retweet-action-on-green"), forState: UIControlState.Normal)
-        }
-        self.tableView.reloadData()
-    }
-    
-    @IBAction func onFavoriteButton(sender: AnyObject) {
-        if toggleFavorite == 0 {
-            toggleFavorite = 1
-            sender.setImage(UIImage(named: "like-action-off"), forState: UIControlState.Normal)
-        } else{
-            toggleFavorite = 0
-            sender.setImage(UIImage(named: "like-action-on-red"), forState: UIControlState.Normal)
-        }
-    }
-    
+   
     
     /*
     // MARK: - Navigation
