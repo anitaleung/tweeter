@@ -32,6 +32,8 @@ class TwitterClient: BDBOAuth1SessionManager {
         }
     }
     
+    
+    
     func logout() {
         User.currentUser = nil
         deauthorize()
