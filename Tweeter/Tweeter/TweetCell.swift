@@ -10,11 +10,11 @@ import UIKit
 
 class TweetCell: UITableViewCell {
 
-    @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var screennameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tweetContentLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
 //    var tweet: Tweet? {
 //        didSet {

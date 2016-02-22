@@ -54,28 +54,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xuN-2a-MpP">
-                                            <rect key="frame" x="8" y="0.0" width="65" height="65"/>
+                                            <rect key="frame" x="8" y="8" width="65" height="65"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anita Leung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZz-uj-yPJ">
-                                            <rect key="frame" x="81" y="0.0" width="91" height="21"/>
+                                            <rect key="frame" x="81" y="8" width="91" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@nitaleung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-BM-G7n">
-                                            <rect key="frame" x="174" y="0.0" width="91" height="21"/>
+                                            <rect key="frame" x="174" y="8" width="91" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4h" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFb-3X-S9p">
-                                            <rect key="frame" x="294" y="0.0" width="18" height="17"/>
+                                            <rect key="frame" x="294" y="12" width="18" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is some tweet of mine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYs-b0-rMl">
-                                            <rect key="frame" x="81" y="22" width="204" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is some tweet of mine" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYs-b0-rMl">
+                                            <rect key="frame" x="81" y="30" width="231" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -83,8 +83,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="profileImageView" destination="xuN-2a-MpP" id="vXf-yD-RTA"/>
                                     <outlet property="screennameLabel" destination="hZz-uj-yPJ" id="lqy-Jp-oSd"/>
-                                    <outlet property="thumbImageView" destination="xuN-2a-MpP" id="kuf-fe-biO"/>
                                     <outlet property="timestampLabel" destination="dFb-3X-S9p" id="Rhx-ZU-VO3"/>
                                     <outlet property="tweetContentLabel" destination="vYs-b0-rMl" id="qHe-Y8-zBg"/>
                                     <outlet property="usernameLabel" destination="ow9-BM-G7n" id="fVl-D8-mcA"/>

@@ -52,6 +52,18 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
         let tweet = tweets[indexPath.row]
         
+        cell.usernameLabel.text = "@\(tweet.username!)"
+        cell.screennameLabel.text = tweet.displayname
+        cell.tweetContentLabel.text = tweet.text as? String
+        
+        let profileImageUrl = NSURL(string: tweet.profileImageUrl!)
+        cell.profileImageView.layer.cornerRadius = 7.0
+        cell.profileImageView.clipsToBounds = true
+        cell.profileImageView.setImageWithURL(profileImageUrl!)
+        
+        print("PROFILE IMAGE URL!!!!!!!!!!!!!!!!!!!!!!")
+        print(cell.profileImageView)
+        
         //cell.tweetContentLabel.text = tweet.text as? String
         
 //        if tweets != nil {
@@ -64,7 +76,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tweets != nil {
-            return 20 // adjust number of tweets shown
+            return tweets.count
         } else {
             return 0
         }
