@@ -68,9 +68,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         
-        print("PROFILE IMAGE URL------------------------")
-        print(tweet.favoritesCount)
-        
         //cell.tweetContentLabel.text = tweet.text as? String
         
 //        if tweets != nil {
@@ -94,7 +91,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         print("Retweet button clicked")
         if toggleRetweet == 0 {
             toggleRetweet = 1
-            sender.setImage(UIImage(named: "retweet-action-inactive"), forState: UIControlState.Normal)
+            sender.setImage(UIImage(named: "retweet-action_default"), forState: UIControlState.Normal)
         } else {
             toggleRetweet = 0
             sender.setImage(UIImage(named: "retweet-action-on-green"), forState: UIControlState.Normal)
@@ -106,10 +103,9 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         if toggleFavorite == 0 {
             toggleFavorite = 1
             sender.setImage(UIImage(named: "like-action-off"), forState: UIControlState.Normal)
-        }else{
+        } else{
             toggleFavorite = 0
             sender.setImage(UIImage(named: "like-action-on-red"), forState: UIControlState.Normal)
-            
         }
     }
     
