@@ -166,6 +166,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLh-2j-9Sc">
+                                            <rect key="frame" x="289" y="2" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <state key="normal" title="\/"/>
+                                            <connections>
+                                                <action selector="onViewProfileButton:" destination="2m9-0P-GEv" eventType="touchUpInside" id="Nev-Gl-5gw"/>
+                                                <segue destination="lo8-wx-aMp" kind="showDetail" identifier="viewProfileSegue" id="PYF-m6-Bug"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ow9-BM-G7n" firstAttribute="top" secondItem="sLg-dZ-Mwi" secondAttribute="top" constant="8" id="GCL-T8-ycU"/>
@@ -215,6 +224,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhK-xc-Feh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1529" y="265"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="aeQ-Yp-t8b">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="y6X-AO-dtc" customClass="ProfileViewController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g57-LE-RqJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iO5-K2-F4A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GXA-r5-xH6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anita Leung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQN-kQ-ItF">
+                                <rect key="frame" x="20" y="242" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@anitaleung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-Ef-1sn">
+                                <rect key="frame" x="20" y="265" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="524-QW-Ohc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="139"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-RG-RF0">
+                                <rect key="frame" x="128" y="169" width="65" height="65"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Awesome tagline here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f04-1E-fyN">
+                                <rect key="frame" x="20" y="289" width="280" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMH-sP-e1E">
+                                <rect key="frame" x="21" y="352" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wks-8h-p4s">
+                                <rect key="frame" x="20" y="377" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200 Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9r-D2-n3R">
+                                <rect key="frame" x="21" y="401" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2QN-Fo-SH6">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HqP-yc-mSF">
+                            <color key="tintColor" red="0.97977561940000002" green="0.9702191295" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onBackButton:" destination="y6X-AO-dtc" id="AfV-rS-iLg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="524-QW-Ohc" id="KKU-eY-LLo"/>
+                        <outlet property="displaynameLabel" destination="aQN-kQ-ItF" id="uVf-hi-mUv"/>
+                        <outlet property="followersCountLabel" destination="I9r-D2-n3R" id="Bby-UG-ycJ"/>
+                        <outlet property="followingCountLabel" destination="Wks-8h-p4s" id="bH4-BS-yz4"/>
+                        <outlet property="profileImageView" destination="WJc-RG-RF0" id="CP7-iT-6b5"/>
+                        <outlet property="taglineLabel" destination="f04-1E-fyN" id="c9t-HY-JtT"/>
+                        <outlet property="tweetsCountLabel" destination="NMH-sP-e1E" id="Y0o-k4-y8o"/>
+                        <outlet property="usernameLabel" destination="uZU-Ef-1sn" id="Z21-FH-Fe2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHr-ab-BHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="335"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="TMa-GS-4gP">
@@ -374,6 +464,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laA-uK-J74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="-383"/>
+        </scene>
+        <!--Tweets Navigation Controller-->
+        <scene sceneID="8Gv-Jl-oGY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lo8-wx-aMp" customClass="TweetsNavigationController" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TGO-e4-OkO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46348906340000001" green="0.77397410050000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="us2-He-4gb">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="y6X-AO-dtc" kind="relationship" relationship="rootViewController" id="aqH-XP-UZq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F79-Dr-La1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="-383"/>
         </scene>
     </scenes>
     <resources>

@@ -66,8 +66,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.usernameLabel.text = "@\(tweet.username!)"
         cell.screennameLabel.text = tweet.displayname
         cell.tweetContentLabel.text = tweet.text as? String
-        //cell.retweetLabel.text = "\(tweet.retweetCount)"
-        //cell.favoriteLabel.text = "\(tweet.favoritesCount)"
         cell.timestampLabel.text = "\(tweet.timestamp!)"
         
         
@@ -75,15 +73,8 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.profileImageView.clipsToBounds = true
         cell.profileImageView.setImageWithURL(tweet.user!.profileUrl!)
         
-        
-        
         //cell.tweetContentLabel.text = tweet.text as? String
-        
-//        if tweets != nil {
-//            cell.business = filteredData[indexPath.row]
-//        } else {
-//            cell.business = businesses[indexPath.row]
-//        }
+
         return cell
     }
    
@@ -102,6 +93,9 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
 
     }
     
+    @IBAction func onViewProfileButton(sender: AnyObject) {
+        //self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("ProfileViewController") as UIViewController, animated: true)
+    }
     
     // MARK: - Navigation
 
@@ -109,12 +103,29 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPathForCell(cell)
-        let tweet = tweets[indexPath!.row]
+        if segue.identifier == "viewDetailsSegue" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweet = tweets[indexPath!.row]
+            
+            let detailViewController = segue.destinationViewController as! DetailViewController
+            detailViewController.tweet = tweet
+        } else if segue.identifier == "viewProfileSegue" {
+            if let button = sender as? UIButton {
+                let cell = button.superview?.superview as! UITableViewCell
+                let indexPath = tableView.indexPathForCell(cell)
+                let tweet = tweets[indexPath!.row]
+                
+                //let profileViewController = segue.destinationViewController as! ProfileViewController
+                let profileNavigationViewController = segue.destinationViewController as! UINavigationController
+                let profileViewController = profileNavigationViewController.viewControllers.first as! ProfileViewController
+                
+                //tableVC.yourTableViewArray = localArrayValue
+                
+                profileViewController.tweet = tweet
+            }
+        }
         
-        let detailViewController = segue.destinationViewController as! DetailViewController
-        detailViewController.tweet = tweet
         
     }
     
