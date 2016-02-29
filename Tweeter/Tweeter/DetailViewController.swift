@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         displaynameLabel.text = tweet.displayname
         usernameLabel.text = "@\(tweet.username!)"
         tweetContent.text = tweet.text! as String
-        timestampLabel.text = "\(tweet.timestamp!)"
+        timestampLabel.text = "\(tweet.time!)"
         retweetCountLabel.text = "\(tweet.retweetCount)"
         favoriteCountLabel.text = "\(tweet.favoritesCount)"
  

@@ -62,11 +62,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
         cell.tweet = tweets![indexPath.row]
         let tweet = tweets[indexPath.row]
-        
+                
         cell.usernameLabel.text = "@\(tweet.username!)"
         cell.screennameLabel.text = tweet.displayname
         cell.tweetContentLabel.text = tweet.text as? String
-        cell.timestampLabel.text = "\(tweet.timestamp!)"
+        cell.timestampLabel.text = "\(tweet.time!)"
         
         
         cell.profileImageView.layer.cornerRadius = 7.0
