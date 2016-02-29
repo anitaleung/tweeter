@@ -57,7 +57,6 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func homeTimeline(success: ([Tweet]) -> (), failure: (NSError) -> ()) {
-        
         GET("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
             let dictionaries = response as! [NSDictionary]
             
@@ -69,6 +68,15 @@ class TwitterClient: BDBOAuth1SessionManager {
                 failure(error)
         })
         
+    }
+    
+    func postTweetWithCompletion(params: NSDictionary?, completion: (response: NSDictionary?, error: NSError?)->()) {
+        TwitterClient.sharedInstance.POST("1.1/statuses/update.json", parameters: params, progress: nil, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            let dic = response as! NSDictionary
+            completion(response: dic, error: nil)
+            }) { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                completion(response: nil, error: error)
+        }
     }
     
     func currentAccount(success: (User) -> (), failure: (NSError) -> ()) {

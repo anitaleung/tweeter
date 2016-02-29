@@ -32,6 +32,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
                 print("Timestamp: \(tweet.timestamp)")
                 print("Favorites: \(tweet.favoritesCount)")
                 print("Retweets: \(tweet.retweetCount)")
+                print("Profile img url: \(tweet.profileImageUrl)")
                 
                 //favoriteCount = tweet.favoritesCount
                 //print("Updated Favorites: \(favoriteCount)")
@@ -96,15 +97,28 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
    
+    @IBAction func onNewButton(sender: AnyObject) {
+        self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("NewTweetViewController") as UIViewController, animated: true)
+
+    }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let tweet = tweets[indexPath!.row]
+        
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.tweet = tweet
+        
     }
-    */
+    
+
+
 
 }
